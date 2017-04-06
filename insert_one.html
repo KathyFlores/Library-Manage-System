@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+		<!-- bootstrap -->
+    <meta charset="utf-8">
+    <style>
+		body {
+			margin-top: 60px;
+			text-align:center;
+			background-color: #F5F5F5;
+		}
+		</style>
+  </head>
+  <body>
+  	<div class="container">
+    	<div class="row clearfix">
+    		<div class="col-xs-12 column">
+    			<div class="jumbotron">
+	    			<h1 class="text-center text-primary">图书管理系统</h1>
+	    			<br><div style="padding: 1% 25% 0;">
+	    			<form action ="insert.php" method="post">
+	    			<div class="input-group">
+	    			<span class="input-group-addon">&ensp;书&emsp;号&ensp;</span><input type="text" class="form-control" placeholder="必填，10位以内，例如：I000093046" name="bno" required></div><br>
+	    			<div class="input-group">
+	    			<span class="input-group-addon">&ensp;类&emsp;别&ensp;</span><input type="text" class="form-control" placeholder="必填，例如：计算机" name="category" required></div><br>
+	    			<div class="input-group">
+	    			<span class="input-group-addon">&ensp;标&emsp;题&ensp;</span><input type="text" class="form-control" placeholder="必填，例如：数据库系统概念" name="title" required></div><br>
+	    			<div class="input-group">
+	    			<span class="input-group-addon">出&ensp;版&ensp;社</span><input type="text" class="form-control" placeholder="必填，例如：机械工业出版社" name="press" required></div><br>
+	    			<div class="input-group">
+	    			<span class="input-group-addon">出版时间</span><input type="text" class="form-control" placeholder="必填，例如：2011" name="year" required></div><br>
+	    			<div class="input-group">
+	    			<span class="input-group-addon">&ensp;作&emsp;者&ensp;</span><input type="text" class="form-control" placeholder="必填，例如：Abraham.S" name="author" required></div><br>
+	    			<div class="input-group">
+	    			<span class="input-group-addon">&ensp;价&emsp;格&ensp;</span><input type="text" class="form-control" placeholder="必填，例如：66.66" name="price" required></div><br>
+	    			<div class="input-group">
+	    			<span class="input-group-addon">&ensp;数&emsp;量&ensp;</span><input type="text" class="form-control" placeholder="必填，例如：66" name="num" required></div><br>
+
+						<input type="submit" class="btn btn-primary" name="submit" value="单本入库">
+						<a href="insert.html"><button type="button" class="btn btn-primary">返回上页</button></a>
+						</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="text-center">
+			<hr>
+			<p>© Coded by <a href="https://github.com/KathyFlores" target="_blank">王淼</p>
+		</footer>
+  </body>
+</html>

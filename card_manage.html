@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<!-- bootstrap -->
+    <meta charset="utf-8">
+    <style>
+		body {
+			margin-top: 60px;
+			text-align:center;
+			background-color: #F5F5F5;
+		}
+		</style>
+  </head>
+  <body>
+  <div class="container">
+    <div class="row clearfix">
+    	<div class="col-xs-12 column">
+    		<div class="jumbotron">
+    			<h1 class="text-center text-primary">图书管理系统</h1><br>
+					<div style="padding: 1% 25% 0;">
+						<form action ="card_manage.php" method="post">
+						<div class="input-group">
+			   		<span class="input-group-addon">
+						借书证号</span><input type="text" class="form-control" placeholder="必填，7位以内，例如：3104650" name="cno" required></div><br>
+						<div class="input-group">
+			   		<span class="input-group-addon">&ensp;姓&emsp;名&ensp;</span><input type="text" class="form-control" placeholder="7位以内，例如：3104650" name="name"></div><br>
+						<div class="input-group">
+			   		<span class="input-group-addon">&ensp;学&emsp;院&ensp;</span><input type="text" class="form-control" placeholder="7位以内，例如：3104650" name="department"></div><br>
+						<div class="input-group">
+			   		<span class="input-group-addon ">&ensp;类&emsp;型&ensp;</span>
+			   		<span class="form-control"><input type="radio" name="type" value="T">&emsp;教师卡&emsp;&emsp;<input type="radio" name="type" value="S" checked>&emsp;学生卡&emsp;&emsp;</span></div><br><br>
+						<input class="btn btn-primary" type="submit" name="submit" value="添加">
+						<input class="btn btn-primary" type="submit" name="submit" value="修改">
+						<input class="btn btn-primary" type="submit" name="submit" value="删除">
+						<a href="library.html"><button type="button" class="btn btn-primary">返回主页</button></a><br><br>
+						</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="text-center">
+			<hr>
+			<p>© Coded by <a href="https://github.com/KathyFlores" target="_blank">王淼</p>
+		</footer>
+  </body>
+</html>

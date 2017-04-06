@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+		<!-- bootstrap -->
+    <meta charset="utf-8">
+    <style>
+		body {
+			margin-top: 60px;
+			text-align:center;
+			background-color: #F5F5F5;
+		}
+		</style>
+  </head>
+  <body>
+  	<div class="container">
+    	<div class="row clearfix">
+    		<div class="col-xs-12 column">
+    			<div class="jumbotron">
+	    			<h1 class="text-center text-primary">图书管理系统</h1>
+	    			<h3><br>请从本地选择文件</h3><br>
+	    			<div style="padding: 1% 25% 0;">
+						<form action="insert.php" method="post" enctype="multipart/form-data">
+						<div class="input-group">
+
+						<div style="padding:1% 36% 0;"><input type="file" name="file" id="file"></div><br>
+						<input type="submit" class="btn btn-primary" name="submit" value="批量入库">
+						<a href="insert.html"><button type="button" class="btn btn-primary">返回上页</button></a>
+						</div>
+						</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="text-center">
+			<hr>
+			<p>© Coded by <a href="https://github.com/KathyFlores" target="_blank">王淼</p>
+		</footer>
+    </body>
+</html>
