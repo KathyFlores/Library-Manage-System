@@ -29,7 +29,7 @@
  * @Author: KathyF
  * @Date:   2017-04-05 11:48:20
  * @Last Modified by:   KathyF
- * @Last Modified time: 2017-04-07 19:56:25
+ * @Last Modified time: 2017-04-07 23:15:55
  */
 header("content-Type: text/html; charset=Utf-8");
 
@@ -120,7 +120,7 @@ function insertions_book($filename)
     $countline=count(file($filename));
     echo '入库'.$countline.'条记录<br><br>';
     $data=trim($contents,chr(0xEF).chr(0xBB).chr(0xBF));
-    echo chr(0xEF).chr(0xBB).chr(0xBF);
+    //echo chr(0xEF).chr(0xBB).chr(0xBF);
     //echo $data;
     $data=strtr($data,"\n"," ");
     $info=explode(" ",$data);

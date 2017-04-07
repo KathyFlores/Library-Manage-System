@@ -27,7 +27,7 @@
  * @Author: KathyF
  * @Date:   2017-04-06 12:46:23
  * @Last Modified by:   KathyF
- * @Last Modified time: 2017-04-07 19:57:25
+ * @Last Modified time: 2017-04-07 22:24:45
  */
 include dirname(__FILE__).'\dbms_connect.php';
 $action=$_POST["submit"];
@@ -108,7 +108,13 @@ function alter_card($cno,$name,$department,$type)
 
 		}
 		if($flag==1)
-			echo "借书证信息修改成功！";
+		{
+			echo "借书证号为".$cno."的信息修改成功！<br>";
+			echo "修改后：<br>";
+			echo "姓名： ".$name;
+			echo "<br>学院： ".$department;
+			echo "<br>类型： ".($type=='T'?"教师卡":"学生卡");
+		}
 		else
 			echo "没有输入任何修改信息!";
 
