@@ -27,7 +27,7 @@
  * @Author: KathyF
  * @Date:   2017-04-06 12:46:23
  * @Last Modified by:   KathyF
- * @Last Modified time: 2017-04-07 00:20:02
+ * @Last Modified time: 2017-04-07 17:44:04
  */
 include dirname(__FILE__).'\dbms_connect.php';
 $action=$_POST["submit"];

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<!-- bootstrap -->
+    	<meta charset="utf-8">
+    	<style>
+		@import url('page.css')
+		</style>
+ 	</head>
+	<body>
+	<div class="container">
+    	<div class="row clearfix">
+    		<div class="col-xs-12 column">
+    			<div class="jumbotron">
+    				<div id="background">
+    				<h1 class="text-center text-primary">图书管理系统</h1><br>
+    				<h3>请输入数据库用户名与密码</h3><br>
+				    <div style="padding: 1% 25% 0;">
+				    <form action ="login.php" method="post">
+				    <div class="input-group">
+				    <span class="input-group-addon">用&ensp;户&ensp;名</span><input type="text" class="form-control" placeholder="必填" name="username" required></div><br>
+				    <div class="input-group">
+				    <span class="input-group-addon">&ensp;密&emsp;码&ensp;</span><input type="password" class="form-control" placeholder="必填" name="password" required></div><br>
+					<input class="btn btn-primary" type="submit" name="submit" value="登录">
+
+					</form>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="text-center">
+		<hr>
+		<p>© Coded by <a href="https://github.com/KathyFlores" target="_blank">王淼</p>
+	</footer>
+	</body>
+</html>
