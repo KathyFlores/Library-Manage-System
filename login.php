@@ -3,7 +3,7 @@
  * @Author: KathyF
  * @Date:   2017-04-07 17:03:04
  * @Last Modified by:   KathyF
- * @Last Modified time: 2017-04-07 17:54:52
+ * @Last Modified time: 2017-04-07 19:58:22
  */
 
 
@@ -23,9 +23,7 @@ try
 	$dbh = new PDO($dsn, $user, $pass, array(PDO::ATTR_PERSISTENT => true));
 	$dbh->setAttribute(PDO::ATTR_CASE, PDO::CASE_UPPER);
 
-	echo '<script language="javascript">';
-	echo 'document.location="library.html"';
-	echo '</script>';
+	echo '<script language="javascript">document.location="library.html"</script>';
 } catch (PDOException $e) {
     die ('<html lang="en">
          	<head>
@@ -50,7 +48,7 @@ try
 			</div>
 			<footer class="text-center">
 				<hr>
-				<p>© Coded by <a href="https://github.com/KathyFlores" target="_blank">王淼</p>
+				© Coded by <a href="https://github.com/KathyFlores" target="_blank">王淼
 			</footer>
 			</body>
 		</html>');

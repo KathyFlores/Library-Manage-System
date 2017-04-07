@@ -27,7 +27,7 @@
  * @Author: KathyF
  * @Date:   2017-04-06 12:19:16
  * @Last Modified by:   KathyF
- * @Last Modified time: 2017-04-07 17:43:44
+ * @Last Modified time: 2017-04-07 19:58:31
  */
 include dirname(__FILE__).'\select.php';
 
@@ -50,7 +50,7 @@ select_book($bno,$category,$title,$press,$year_l,$year_r,$price_l,$price_r,$auth
 	</div>
 	<footer class="text-center">
 		<hr>
-		<p>© Coded by <a href="https://github.com/KathyFlores" target="_blank">KathyFlores</a></p>
+		© Coded by <a href="https://github.com/KathyFlores" target="_blank">KathyFlores</a>
 	</footer>
   </body>
 </html>

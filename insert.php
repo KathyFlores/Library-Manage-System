@@ -13,6 +13,7 @@
         p {
             font-size: 20px;
         }
+
         </style>
   </head>
   <body>
@@ -28,10 +29,10 @@
  * @Author: KathyF
  * @Date:   2017-04-05 11:48:20
  * @Last Modified by:   KathyF
- * @Last Modified time: 2017-04-07 17:43:41
+ * @Last Modified time: 2017-04-07 19:56:25
  */
 header("content-Type: text/html; charset=Utf-8");
-include dirname(__FILE__).'\dbms_connect.php';
+
 include dirname(__FILE__).'\select.php';
 $action=$_POST["submit"];
 switch($action)
@@ -100,31 +101,27 @@ function insert_into_book($bno,$category,$title,$press,$year,$author,$price,$num
 
     else//已经有了这本书，修改
     {
-        echo "系统中已有该书目，相关信息已更新，请核对!<br>";
-        echo "更新前：<br>";
-        select_book($bno,$category,$title,$press,null,null,null,null,$author);
-        $stmt="UPDATE book SET total=total+".$num.", stock =stock+".$num." WHERE bno = '".$bno."'";
+        echo "系统中已有书号为".$bno."的书目，相关信息已更新，请核对!<br>";
+        echo '</p><div class="row"><div class="col-xs-6"><p>更新前：<br>';
+        select_book($bno,null,null,null,null,null,null,null,null);
+        $stmt="UPDATE book SET category = '".$category."',title='".$title."',press='".$press."',year=".$year.",author='".$author."',price=".$price.",total=total+".$num.", stock =stock+".$num." WHERE bno = '".$bno."'";
         //echo $stmt;
         $dbh->exec($stmt);
-        echo "入库".$num."本后：<br>";
-        select_book($bno,$category,$title,$press,null,null,null,null,$author);
-
+        echo '</p></div><div class="col-xs-6"><p>入库 '.$num.'本后：<br>';
+        select_book($bno,null,null,null,null,null,null,null,null);
+        echo '</p></div></div><p>';
     }
 }
-function my_encoding($data,$to)
-{
-    $encode_arr = array('UTF-8','ASCII','GBK','GB2312','BIG5','JIS','eucjp-win','sjis-win','EUC-JP');
-    $encoded = mb_detect_encoding($data, $encode_arr);
-    $data = mb_convert_encoding($data,$to,$encoded);
-    return $data;
-}
+
 function insertions_book($filename)
 {
     global $dbh;
-    $file= file_get_contents($filename);
+    $contents= file_get_contents($filename,0,NULL,1);
     $countline=count(file($filename));
-    echo '成功入库'.$countline.'条记录<br><br>';
-    $data = my_encoding($file,"utf-8");
+    echo '入库'.$countline.'条记录<br><br>';
+    $data=trim($contents,chr(0xEF).chr(0xBB).chr(0xBF));
+    echo chr(0xEF).chr(0xBB).chr(0xBF);
+    //echo $data;
     $data=strtr($data,"\n"," ");
     $info=explode(" ",$data);
     //print_r($info);
@@ -150,7 +147,7 @@ function insertions_book($filename)
     </div>
     <footer class="text-center">
         <hr>
-        <p>© Coded by <a href="https://github.com/KathyFlores" target="_blank">王淼</a></p>
+        © Coded by <a href="https://github.com/KathyFlores" target="_blank">王淼</a>
     </footer>
   </body>
 </html>

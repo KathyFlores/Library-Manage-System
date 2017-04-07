@@ -4,7 +4,7 @@
  * @Author: KathyF
  * @Date:   2017-04-05 16:54:39
  * @Last Modified by:   KathyF
- * @Last Modified time: 2017-04-07 17:43:37
+ * @Last Modified time: 2017-04-07 19:25:31
  */
 
 include dirname(__FILE__).'\dbms_connect.php';
@@ -41,6 +41,8 @@ function select_book($bno,$category,$title,$press,$year_l,$year_r,$price_l,$pric
 		$stmt.="author = "."'".$author."'";
 	else
 		$stmt.="author LIKE '%'";
+	$stmt.=' ORDER BY bno ASC';
+	//echo $stmt;
 	$result = $dbh->query($stmt);
 	$result->setFetchMode(PDO::FETCH_ASSOC);
 	foreach ($result as $row)

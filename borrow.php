@@ -28,7 +28,7 @@
  * @Author: KathyF
  * @Date:   2017-04-05 19:26:15
  * @Last Modified by:   KathyF
- * @Last Modified time: 2017-04-07 17:44:59
+ * @Last Modified time: 2017-04-07 19:57:08
  */
 
 include dirname(__FILE__).'\dbms_connect.php';
@@ -239,7 +239,7 @@ function return_book($cno,$bno)
 	</div>
 	<footer class="text-center">
 		<hr>
-		<p>© Coded by <a href="https://github.com/KathyFlores" target="_blank">王淼</a></p>
+		© Coded by <a href="https://github.com/KathyFlores" target="_blank">王淼</a>
 	</footer>
   </body>
 </html>

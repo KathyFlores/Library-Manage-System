@@ -27,7 +27,7 @@
  * @Author: KathyF
  * @Date:   2017-04-06 12:46:23
  * @Last Modified by:   KathyF
- * @Last Modified time: 2017-04-07 17:44:04
+ * @Last Modified time: 2017-04-07 19:57:25
  */
 include dirname(__FILE__).'\dbms_connect.php';
 $action=$_POST["submit"];
@@ -137,7 +137,7 @@ function remove_card($cno)
 	</div>
 	<footer class="text-center">
 		<hr>
-		<p>© Coded by <a href="https://github.com/KathyFlores" target="_blank">王淼</a></p>
+		© Coded by <a href="https://github.com/KathyFlores" target="_blank">王淼</a>
 	</footer>
   </body>
 </html>
