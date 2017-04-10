@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css">
 		<!-- bootstrap -->
+	<title>图书管理系统-借书还书</title>
     <meta charset="utf-8">
     <style>
 		body {
@@ -28,7 +29,7 @@
  * @Author: KathyF
  * @Date:   2017-04-05 19:26:15
  * @Last Modified by:   KathyF
- * @Last Modified time: 2017-04-07 19:57:08
+ * @Last Modified time: 2017-04-10 12:20:28
  */
 
 include dirname(__FILE__).'\dbms_connect.php';

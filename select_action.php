@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css">
 		<!-- bootstrap -->
+	<title>图书管理系统-查询书目</title>
     <meta charset="utf-8">
     <style>
 		body {
@@ -27,7 +28,7 @@
  * @Author: KathyF
  * @Date:   2017-04-06 12:19:16
  * @Last Modified by:   KathyF
- * @Last Modified time: 2017-04-07 19:58:31
+ * @Last Modified time: 2017-04-10 12:19:42
  */
 include dirname(__FILE__).'\select.php';
 

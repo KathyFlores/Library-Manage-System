@@ -3,7 +3,7 @@
  * @Author: KathyF
  * @Date:   2017-04-07 17:03:04
  * @Last Modified by:   KathyF
- * @Last Modified time: 2017-04-07 19:58:22
+ * @Last Modified time: 2017-04-10 12:19:54
  */
 
 
@@ -29,6 +29,7 @@ try
          	<head>
 	         	<link rel="stylesheet"href="https://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css">
 	    		<meta charset="utf-8">
+	    		<title>图书管理系统</title>
 	    		<style>
 					@import url("page.css")
 				</style>

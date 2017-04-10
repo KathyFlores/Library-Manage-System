@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css">
-
+    <title>图书管理系统-图书入库</title>
     <meta charset="utf-8">
     <style>
         body {
@@ -29,7 +29,7 @@
  * @Author: KathyF
  * @Date:   2017-04-05 11:48:20
  * @Last Modified by:   KathyF
- * @Last Modified time: 2017-04-07 23:15:55
+ * @Last Modified time: 2017-04-10 12:20:07
  */
 header("content-Type: text/html; charset=Utf-8");
 
