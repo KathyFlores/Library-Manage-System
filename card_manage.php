@@ -28,12 +28,12 @@
  * @Author: KathyF
  * @Date:   2017-04-06 12:46:23
  * @Last Modified by:   KathyF
- * @Last Modified time: 2017-04-10 12:20:21
+ * @Last Modified time: 2017-04-20 09:27:24
  */
 include dirname(__FILE__).'\dbms_connect.php';
 $action=$_POST["submit"];
 $cno=$_POST["cno"];
-switch($action)
+switch($action)//获取表单数据
 {
 case "添加":
 	if(empty($_POST["type"])||empty($_POST["name"])||empty($_POST["department"]))
@@ -130,9 +130,24 @@ function remove_card($cno)
 		echo "未查询到该借书证号！请检查您的输入！";
 	else
 	{
-		$stmt="DELETE FROM card WHERE cno = '".$cno."'";
-		$dbh->exec($stmt);
-		echo "已删除借书证号为 ".$cno." 的借书证信息及其所有借书记录！";
+		$stmt="SELECT * FROM borrow where cno = '".$cno."'and done = 0";
+		$result = $dbh->query($stmt);
+		if(!empty($result->fetch()))//删除时借书证有书未归还
+		{
+
+			echo "无法删除该借书证！<br>仍有以下书目尚未归还：<br>";
+			$stmt="SELECT * FROM borrow where cno = '".$cno."'and done = 0";
+			$result = $dbh->query($stmt);
+			$result->setFetchMode(PDO::FETCH_ASSOC);
+			foreach ($result as $row)
+				echo "书号：".$row['BNO']."<br>";
+		}
+		else
+		{
+			$stmt="DELETE FROM card WHERE cno = '".$cno."'";
+			$dbh->exec($stmt);
+			echo "已删除借书证号为 ".$cno." 的借书证信息及其所有借书记录！";
+		}
 
 	}
 }
